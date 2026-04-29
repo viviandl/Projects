@@ -1,6 +1,6 @@
-PWD c:\Users\vivia\OneDrive\Documents\Projects
+PWD c:\Users\vivia\OneDrive\Documents\Projects\667
 INPUT C:\Users\vivia\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT c:\Users\vivia\OneDrive\Documents\Projects\667.tex
+INPUT c:\Users\vivia\OneDrive\Documents\Projects\667\667.tex
 OUTPUT 667.log
 INPUT C:\Users\vivia\AppData\Local\Programs\MiKTeX\tex\latex\amscls\amsart.cls
 INPUT C:\Users\vivia\AppData\Local\Programs\MiKTeX\tex\latex\amscls\amsart.cls
