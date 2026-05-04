@@ -1,0 +1,155 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{anyt/global//global/global}
+    \entry{CEF14}{article}{}
+      \name{author}{3}{}{%
+        {{hash=c876bc6ec7ef9662ededf0d8629e32b7}{%
+           family={Church},
+           familyi={C\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+        {{hash=624888d26974622b4f004ef90b10d822}{%
+           family={Ellenberg},
+           familyi={E\bibinitperiod},
+           given={Jordan\bibnamedelima S.},
+           giveni={J\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=5b0089d70abcfe34be37d817a1622b42}{%
+           family={Farb},
+           familyi={F\bibinitperiod},
+           given={Benson},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{ce7aa1c685b50f0b2332f8f0feaf794c}
+      \strng{fullhash}{ce7aa1c685b50f0b2332f8f0feaf794c}
+      \strng{bibnamehash}{ce7aa1c685b50f0b2332f8f0feaf794c}
+      \strng{authorbibnamehash}{ce7aa1c685b50f0b2332f8f0feaf794c}
+      \strng{authornamehash}{ce7aa1c685b50f0b2332f8f0feaf794c}
+      \strng{authorfullhash}{ce7aa1c685b50f0b2332f8f0feaf794c}
+      \field{labelalpha}{CEF15}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Duke Mathematical Journal}
+      \field{note}{arXiv:1204.4533}
+      \field{number}{9}
+      \field{title}{FI-modules and stability for representations of symmetric groups}
+      \field{volume}{164}
+      \field{year}{2015}
+      \field{pages}{1833\bibrangedash 1910}
+      \range{pages}{78}
+      \verb{doi}
+      \verb 10.1215/00127094-3120614
+      \endverb
+    \endentry
+    \entry{church2013representation}{article}{}
+      \name{author}{2}{}{%
+        {{hash=c876bc6ec7ef9662ededf0d8629e32b7}{%
+           family={Church},
+           familyi={C\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+        {{hash=5b0089d70abcfe34be37d817a1622b42}{%
+           family={Farb},
+           familyi={F\bibinitperiod},
+           given={Benson},
+           giveni={B\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{2052f1de3551f7c13bcbd7a87737117b}
+      \strng{fullhash}{2052f1de3551f7c13bcbd7a87737117b}
+      \strng{bibnamehash}{2052f1de3551f7c13bcbd7a87737117b}
+      \strng{authorbibnamehash}{2052f1de3551f7c13bcbd7a87737117b}
+      \strng{authornamehash}{2052f1de3551f7c13bcbd7a87737117b}
+      \strng{authorfullhash}{2052f1de3551f7c13bcbd7a87737117b}
+      \field{labelalpha}{CF13}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Advances in Mathematics}
+      \field{title}{Representation theory and homological stability}
+      \field{volume}{245}
+      \field{year}{2013}
+      \field{pages}{250\bibrangedash 314}
+      \range{pages}{65}
+      \verb{doi}
+      \verb 10.1016/j.aim.2013.06.016
+      \endverb
+    \endentry
+    \entry{Intro}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=44d61410d5e9b8993d06428cf2890f67}{%
+           family={Wilson},
+           familyi={W\bibinitperiod},
+           given={Jenny},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{44d61410d5e9b8993d06428cf2890f67}
+      \strng{fullhash}{44d61410d5e9b8993d06428cf2890f67}
+      \strng{bibnamehash}{44d61410d5e9b8993d06428cf2890f67}
+      \strng{authorbibnamehash}{44d61410d5e9b8993d06428cf2890f67}
+      \strng{authornamehash}{44d61410d5e9b8993d06428cf2890f67}
+      \strng{authorfullhash}{44d61410d5e9b8993d06428cf2890f67}
+      \field{extraname}{1}
+      \field{labelalpha}{Wil18}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extraalpha}{1}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Oberwolfach Workshop 1803: The topology of arrangements and representation stability}
+      \field{title}{A brief introduction to representation stability}
+      \field{year}{2018}
+      \true{nocite}
+    \endentry
+    \entry{FI}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=44d61410d5e9b8993d06428cf2890f67}{%
+           family={Wilson},
+           familyi={W\bibinitperiod},
+           given={Jenny},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{44d61410d5e9b8993d06428cf2890f67}
+      \strng{fullhash}{44d61410d5e9b8993d06428cf2890f67}
+      \strng{bibnamehash}{44d61410d5e9b8993d06428cf2890f67}
+      \strng{authorbibnamehash}{44d61410d5e9b8993d06428cf2890f67}
+      \strng{authornamehash}{44d61410d5e9b8993d06428cf2890f67}
+      \strng{authorfullhash}{44d61410d5e9b8993d06428cf2890f67}
+      \field{extraname}{2}
+      \field{labelalpha}{Wil18}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extraalpha}{2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Michigan Representation Stability Week 2018, University of Michigan}
+      \field{title}{An introduction to FI-modules and their generalizations}
+      \field{year}{2018}
+      \true{nocite}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

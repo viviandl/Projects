@@ -1,4 +1,4 @@
-\documentclass{amsart}
+\documentclass[11pt, letterpaper, notitlepage, oneside]{amsart}
 \usepackage{stmaryrd}
 \usepackage{silence}
 \usepackage{upgreek}
@@ -26,8 +26,14 @@
 \usepackage{float}
 \input xy
 \xyoption{all}
+\usepackage{setspace}
+\usepackage{ytableau}
+
 \usepackage[textheight=8.5in, textwidth=6.5in]{geometry}
 \usepackage[all]{xy}
+\usepackage{fancyhdr}
+\usepackage[backend=biber, style=alphabetic]{biblatex}
+\addbibresource{bib.bib}
 
 
 \newcommand{\graphfont}{\mathsf}
@@ -41,17 +47,26 @@
 \DeclareMathOperator{\id}{\mathrm{id}}
 \DeclareMathOperator{\pr}{\mathrm{pr}}
 \DeclareMathOperator*{\im}{\mathrm{im}}
+\DeclareMathOperator{\End}{\mathrm{End}}
 \DeclareMathOperator*{\PX}{\mathrm{PX}}
 \DeclareMathOperator*{\rk}{\mathrm{rk}}
-\DeclareMathOperator{\pt}{\mathrm{pt}}
+\DeclareMathOperator{\Pt}{\mathrm{pt}}
+\DeclareMathOperator{\Mod}{\mathrm{Mod}}
+\DeclareMathOperator{\Hom}{\mathrm{Hom}}
+\DeclareMathOperator{\FI}{\mathrm{FI}}
 \DeclareMathOperator{\grafica}{\graphfont{\Gamma}}
+\DeclareMathOperator{\B}{\mathbf{B}}
+\DeclareMathOperator{\PB}{\mathbf{P}}
+\DeclareMathOperator{\F}{\mathrm{FI}}
 
 \newcommand{\stargraph}[1]{\graphfont{S}_{#1}}
 \newcommand{\bbR}{\mathbb{R}}
 \newcommand{\bbZ}{\mathbb{Z}}
+\newcommand{\bbQ}{\mathbb{Q}}
+\newcommand{\bbC}{\mathbb{C}}
 
 \theoremstyle{definition}
-\newtheorem{definition}{Definition}[section]
+\newtheorem{definition}{Definition}
 \newtheorem{hypothesis}[definition]{Hypothesis}
 \newtheorem{notation}[definition]{Notation}
 \newtheorem{convention}[definition]{Convention}
@@ -71,14 +86,147 @@
 \newtheorem{Claim}[definition]{Claim}
 
 \pagestyle{fancy}
-\fancyhf{}
-\fancyhead[R]{\thepage}
-\renewcommand{\headrulewidth}{0pt}
+\fancyhf[HR]{MATH 667}
+\fancyhf[HL]{Vivian De León}
+\thispagestyle{fancy}
+
+
+
 
 \begin{document}
+ \setlength{\footskip}{1.0pt}.
+ \setstretch{1.1}
+\centering
+\large{\textbf{REPRESENTATION STABILITY ON BRAID GROUPS}}
+\vspace{10pt}
 
-hola
-como estas
+
+\justifying
+
+\noindent 1. BRAID GROUPS.
+\begin{definition}
+   The \emph{braid group} on $n$ strands $\B_n$ is defined by the presentation:
+   \[\B_n=\{\sigma_1, \sigma_2, \dots, \sigma_{n-1}= \sigma_i\sigma_{i+1}\sigma_i=\sigma_{i+1}\sigma_i\sigma_{i+1}, \sigma_{i}\sigma_j=\sigma_j\sigma_i, \,\,\text{if}\,\,\, |i-j|<1\}.\]
+\end{definition}
+\noindent Each braid defines a permutation on the end points of the $n$ strands.
+
+\begin{definition}
+     The \emph{pure braid group} $\PB_n$ is the kernel of the surjection $\B_n\to \Sigma_n$.
+ 
+\end{definition}  
+
+\noindent The pure braid group $\PB_n$ has a $2n$- real dimensional Eilenberg-Mclane space given by the configuration space of $n$ points in $\bbC$. \[K(\PB_n,1) = F_n(\bbC):= \{(z_1, \dots, z_n)\mid z_i\neq z_j  \,\,\, \text{for all} \,\, i\neq j\}.\]
+
+
+  \noindent As a consequence, we can take $\pi_1(F_n(\bbC))$ as the definition of $\PB_n$.
+
+\vspace{10pt}
+
+\noindent 2. GROUP ACTION.
+\vspace{10pt}
+
+\noindent Consider the following exact sequence. \[\xymatrix{0 \ar[r] & \PB_n \ar[r]& \B_n \ar[r] &\Sigma_n \ar[r] & 0}\]
+
+\noindent and the action of $\B_n$ on $\PB_n$ by conjugation. The pure braid group $\PB_n$ acts on its own cohomology via inner automorphism and these maps are freely homotopic to the identity. Consequently, the action of the full braid group $B_n$ on $H^*(PB_n)$ factors through the quotient $B_n / \PB_n \cong S_n$. 
+
+\noindent Using the maps $\PB_{n+1}\to \PB_n$ defined by deleting a strand, we construct a $\Sigma_n$-equivatiant sequence of representations \[\xymatrix{\ldots \ar[r] & H^q(\PB_n; \bbQ) \ar[r] &H^q(\PB_{n+1}; \bbQ) \ar[r] & \ldots }\]
+
+\noindent We treat $\{H^q(PB_n; \mathbb{Q})\}_n$ as a sequence of $S_n$-representations.
+
+\vspace{10pt}
+
+\noindent 3. REPRESENTATION STABILITY
+\vspace{10pt}
+
+\noindent Recall that all $\Sigma_n$ representations decompose as a direct sume of irreducible representations. Moreover, there is a canonical bijection between these irreducible $\Sigma_n$-representations and the partitions $\lambda$ of $n$.
+
+\noindent \textit{Notation:} Let $\lambda=(\lambda_1, \lambda_2, \dots, \lambda_k)$ be a partition with $\lambda_1\geq \lambda_2\geq \dots\geq\lambda_k>0$ and let $|\lambda|=\lambda_1+ \lambda_2+ \dots+ \lambda_k$.  Then for $n\geq |\lambda|+\lambda_1$, we write $\lambda[n]$ for the partition $$\lambda[n]:= (n-|\lambda|, \lambda_1,\dots, \lambda_k)$$
+adn $V(\lambda)_n$ for the $S_n$-representation
+$$V(\lambda)_n\begin{cases} 0, & \text{if } n < |\lambda| +\lambda_1\\
+    V_{\lambda[n]}& \text{if } n\geq  |\lambda| +\lambda_1
+     \end{cases}$$
+     \vspace{5pt}
+
+
+\begin{definition} 
+     Let $V_n$ be a sequence of rational $\Sigma_n$-representations with decomposition into irreducible constutuents
+          $$V_n= \bigoplus_{\lambda} c_{\lambda}^n V(\lambda)_n.$$
+     Then $V_n$ of is called \emph{multiplicity stable}  if there exists some $N\geq 0$ such that, for all $\lambda$ and for all $n\geq N$,the multiplicities $c_{\lambda}^n = c_{\lambda}^N$ are independent of $n$.
+     \end{definition}
+
+\noindent \textit{Fact.} A sequence $V_n$ of $\Sigma_n$-representations is multiplicity stable if, for $n$ sufficiently large, we can determine the decomposition of $V_{n+1}$ frin that $V_n$ by simply adding a single box to the topo row of the Young diagrams corresponding to each irreducinle constitiuent of $V_n$. This fact provides combinatorial interpretion of the stability.
+
+\noindent The ensuing result, shows that this holds for cohomology groups of $\PB_n$
+
+
+
+
+ \begin{Theorem}[\cite{church2013representation}] For each $q\geq 0$, the sequence of $\Sigma_n$-representations $\{H^q(\PB_n; \bbQ)\}_n$ is multiplicity stable, stabilizing for $n\geq 4q$.
+        \end{Theorem}
+\vspace{1pt}
+
+\noindent 4. $\F$-MODULE STRUCTURE
+\vspace{10pt}
+
+\noindent This section provides a general perspective about representation stability.
+
+\begin{definition}
+    Let $\F$ denote the category whose objects are finite sets and whose morphisms are injective maps. Up to equivalence, this is the category with one object for each positive integer $n$, corresponding to the set $$[n]:= \{1,2,\dots, n\}$$
+    with $\End([n])= \Sigma_n$. Given a commutative ring with unity, an $\F$-module is a functor $$V: \F\to R-\Mod.$$ 
+     We use $V_{[n]}$ to denote the image of $V$ on the set $[n]$. We say $V=\{V_n\}$ is
+generated in degree $
+\leq d$ if $V$ is generated by the set $\coprod_{0\leq n\leq d} V_n$, this is, if $V$ is the smallest $\F$-module containing $\coprod_{0\leq n\leq d} V_n$. If the set is finite, then $V$ is finitely generated.
+     
+\end{definition}
+
+
+\begin{definition}
+     Let $X_r= \coprod_{n\geq 0} S_n \to \bbZ$ denote the class function $$X_r(\tau)= \text{number of $r$-cycles in the cycle type $\tau$}$$
+
+     \noindent A polynomial $P\in \bbQ[X_1, X_2, \dots, X_r, \dots]$ is called a \emph{character polynomial} and we define its degree by setting $\deg(X_r)=r$.
+\end{definition}
+
+\begin{Theorem}[\cite{CEF14}]
+     An $\F$-module $V$  over a field of characteristic $0$ is finitely generated if and only if the sequence $\{V_n\}$ of $\Sigma_n$ representations is multiplicity stable and each $V_n$ is finite dimensional. Moreover, if $V$ is generated in degree $\leq d$, there is an integer $N$ and a unique character polynomial $$\chi_{V_n}(\tau)=P(X_1, \dots, X_d)(\tau)$$
+     for all $n\geq N$ and all $\tau\in \Sigma_n$.
+\end{Theorem}
+
+\noindent \textit{Fact.} $\{H^p(\PB_n; \bbQ)\}_n$ is a sequence of finitely generated $\F$-modules.
+
+
+\vspace{10pt}
+
+     \noindent 5. MULTIPLICITY STABILITY FOR $\{H^1(\PB_n; \bbQ)\}_n$.
+\vspace{10pt}
+
+
+\noindent The  pure braid group is the free group on $n\choose 2$ generators $T_{ij}$ where each generator represent a twist between the $i-th$ and $j-th$ strand and  $H^1(\PB_n; \bbQ)=\bbZ^{n\choose 2}$. Let $\omega_{ij}:= T_{ij}^*$ be the generators of $H^1(\PB_n; \bbQ)$, these are measuring the number of times (with signs) that strand $i$ wraps around strand  $j$. 
+
+\noindent In fact, the cohomology $H^*(\PB_n)= H^*(F_n(\bbC))$ is generated by these degree $1$ elements with  the relation $$\omega_{ij}\omega_{jk}+\omega_{jk}\omega_{ki}+\omega_{ki}\omega_{ij}=0,$$ and the action of $\Sigma_n$ on $F_n(\bbC)$ by permuting the points induces an action on these forms by  $$\tau\cdot \omega_{ij}= \omega_{\tau(i)\tau(j)}.$$
+\noindent As a $\Sigma_n$-representation, the decomposition of $H^1(\PB_n; \bbQ)$ into irreducible representation is
+     \[H^1(\PB_n; \bbQ)= V(0)_n \oplus V(1)_n \oplus V(2)_n \]
+
+
+     \noindent for all $n\geq 4$. Graphically, this is.
+     \begin{align*}
+     H^1(\PB_2,\bbQ) &= V_{\ytableausetup{boxsize=0.8ex}\ydiagram{2}} \\
+     H^1(\PB_3, \bbQ) &= V_{\ytableausetup{boxsize=0.8ex}\ydiagram{3}}\oplus V_{\ytableausetup{boxsize=0.8ex}\ydiagram{2,1}} \\
+     H^1(\PB_4, \bbQ) &=V_{\ytableausetup{boxsize=0.9ex}\ydiagram{4}}\oplus V_{\ytableausetup{boxsize=0.9ex}\ydiagram{3,1}}\oplus V_{\ytableausetup{boxsize=0.9ex}\ydiagram{2,2}}\\
+     H^1(\PB_5, \bbQ) &=V_{\ytableausetup{boxsize=0.9ex}\ydiagram{5}}\oplus V_{\ytableausetup{boxsize=0.9ex}\ydiagram{4,1}}\oplus V_{\ytableausetup{boxsize=0.9ex}\ydiagram{3,2}}  \\
+     H^1(\PB_6, \bbQ) &=V_{\ytableausetup{boxsize=0.9ex}\ydiagram{6}}\oplus V_{\ytableausetup{boxsize=0.9ex}\ydiagram{5,1}}\oplus V_{\ytableausetup{boxsize=0.9ex}\ydiagram{4,2}}
+\end{align*}
+     
+
+Let $\chi_n^1$ denote the character for $H^1(\PB_n)$, then $\chi_n^1= X_2+ {X_1\choose 2}$ for all 
+$n\geq 0$. 
+\vspace{10pt}
+
+
+\vspace{10pt}
+
+\printbibliography
+\nocite{*}
+
 
 
  
